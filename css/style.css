@@ -33,7 +33,7 @@ header {
 .header-nav {
     padding-top: 20px;
 }
-.header-nav a{
+.header-nav a {
     margin: 20px;
     padding-top: 18px;
 }
@@ -42,12 +42,15 @@ header {
     color: var(--main-color);
 }
 main {
-    padding: 25px 25px 0;
+    padding: 0 25px;
 }
 .hero {
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+.hero::before, .hero::after {
+    content:""; /* Applies flex gap like a vertical margin */
 }
 .hero h1 {
     margin: 0;
@@ -55,12 +58,59 @@ main {
 .hero p {
     display: inline;
 }
-.recherche {
+.search {
+    display: flex;
+    overflow: hidden;
+    max-width: 387px;
+    min-height: 52px;
+    border-radius: 15px;
     background-color: var(--main-bg-color);
-    border-radius: 20px;
 }
-.recherche i {
-    padding: 15px 10px;
+.search i {
+    color: black;
+    padding: 20px 20px;
+}
+.search input {
+    border: none;
+    flex-grow: 1;
+    font-weight: bold;
+    font-size: 17px;
+}
+.search input[type=text] {
+    margin: 1px;
+    width: 190px;
+    text-align: center;
+}
+.search input[type=submit] {
+    width: 130px;
+    background-color: var(--main-color);
+    color: white;
+}
+.filters {
+    display: flex;
+    gap: 15px;
+}
+.filters, .filters * {
+    font-weight: bold;
+    font-size: 16px;
+}
+.filters button {
+    border: solid 2px var(--main-bg-color);
+    border-radius: 25px;
+    background-color: white;
+    padding: 10px 15px;
+}
+.filters button:hover {
+    background-color: var(--filter-bg-color)
+}
+.filters button i {
+    margin-right: 8px;
+}
+.information i {
+    padding: 6px 11px;
+    border: solid 2px var(--main-bg-color);
+    border-radius: 100%;
+    margin-right: 10px;
 }
 .section-title {
     margin: 0;
@@ -99,6 +149,20 @@ main {
 .hebergements {
     width: 65%;
 }
+.hebergements-cards {
+    display: flex;
+    gap: 30px;
+}
+.hebergements-cards .card {
+    max-width: 250px;
+    overflow: hidden;
+}
+.hebergements-cards img {
+    height: 120px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
 /****** Populaires ***********/
 .populaires {
     width: 32%;
