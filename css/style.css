@@ -210,6 +210,45 @@ main {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+/* Activités */
+.activities {
+    margin: 60px 0;
+}
+.activities > div{
+    display: flex;
+    justify-content: space-evenly;
+}
+.activities article {
+    background-color: white;
+    border-radius: 20px;
+    max-width: 300px;
+    overflow: hidden;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+.activities article h3 {
+    padding-left: 15px;
+}
+.activities article img {
+    max-height: 380px;
+}
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--main-bg-color);
+    margin: 0 25px;
+}
+footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+footer div::before, footer div::after {
+    content:""; /* Applies flex gap like a vertical margin */
+}
+footer p {
+    margin: 0;
+    font-weight: bold;
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
