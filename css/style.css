@@ -90,7 +90,7 @@ main {
     background-color: var(--main-color);
     color: white;
 }
-.filters {
+.filters, .filters div {
     display: flex;
     gap: 15px;
 }
@@ -308,8 +308,13 @@ footer p {
     .populaires-cards .card {
         width: 270px;
     }
+    .filters {
+        flex-direction: column;
+    }
 }
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
 }
